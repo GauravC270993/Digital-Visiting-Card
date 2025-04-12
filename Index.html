@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Visiting Card</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 30px;
+      text-align: center;
+    }
+    .logo {
+      width: 150px;
+      margin-bottom: 0px;
+    }
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 28px;
+      color: #d4af37; /* Solid gold color */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+    .tagline {
+      color: #32CD32;
+      background: linear-gradient(to right, #32CD32, #9acd32);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .info {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+    .info strong {
+      color: #333;
+    }
+    .qr-section {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0;
+    }
+    .qr-box {
+      text-align: center;
+    }
+    .qr-box img {
+      width: 90px;
+      height: 90px;
+    }
+    .socials {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1px;
+      font-weight: bold;
+    }
+    .socials a {
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      font-size: 13px;
+      width: 70px;
+    }
+    .socials img {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1px;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #d4af37, #f9d976, #e4c27b);
+      color: #000;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: linear-gradient(90deg, #c9a232, #f6c849, #d8b166);
+    }
+
+    /* Hover Effect for Social Media Links */
+    .socials a:hover {
+      color: #32CD32; /* Change color to green */
+      transform: scale(1.1); /* Slight zoom effect */
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Company Logo with fallback image -->
+    <img src="logo.jpg" alt="Company Logo" class="logo"
+         onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=No+Logo';" />
+
+    <h1>RADICAL ENTERPRISES</h1>
+    <div class="tagline">Your Trusted Partner in Providing Medicines and Health Solutions Across Borders</div>
+
+    <div class="info"><strong>Address:</strong> 78, Mahurzari Road, Fetri, Nagpur – 440022, Maharashtra, India</div>
+    <div class="info"><strong>Phone:</strong> +91 827 529 3123</div>
+    <div class="info"><strong>Email:</strong> radicalenterprises.nagpur@gmail.com</div>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="qrcode1.png" alt="QR Code 1" />
+      </div>
+      <div class="qr-box">
+        <img src="qrcode2.png" alt="QR Code 2" />
+      </div>
+      <div class="qr-box">
+        <img src="qrcode3.png" alt="QR Code 3" />
+      </div>
+    </div>
+
+    <div class="socials">
+      <a href="https://wa.me/919876543210" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/>
+        WhatsApp
+      </a>
+      <a href="https://t.me/yourusername" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/telegram-app.png" alt="Telegram"/>
+        Telegram
+      </a>
+      <a href="https://signal.me/#eu/loxnKYMczAWxQpLg15aBHlDnN4_Oo4NtoKVgiRE1SUcwFcKNKFZCQr1Oq_yn9coK" target="_blank">
+        <img src="https://img.icons8.com/color/48/signal-app.png" alt="Signal"/>
+        Signal
+      </a>
+    </div>
+
+    <div style="margin-top: 15px; font-size: 12px; color: #555;">
+      💬 <em>Click on the icons or scan the QR codes above to connect with us and start communicating</em>
+    </div>
+
+    <!-- Download vCard Button -->
+    <a class="download-btn"
+       download="Radical-Enterprises.vcf"
+       href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ARadical%20Enterprises%2C%20India%20%28Gaurav%29%0AORG%3ARadical%20Enterprises%0ATEL%3A%2B91%20827%20529%203123%0AEMAIL%3Aradicalenterprises.nagpur%40gmail.com%0AADR%3A%3B%3B78%2C%20Mahurzari%20Road%2C%20Fetri%3BNagpur%3BMaharashtra%3B440022%3BIndia%0AEND%3AVCARD">
+      📥 Download vCard
+    </a>
+  </div>
+</body>
+</html>
