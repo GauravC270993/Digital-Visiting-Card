@@ -24,16 +24,9 @@
       text-align: center;
     }
     .logo {
-      width: 150px;
-      margin-bottom: 0px;
-      opacity: 0;  /* Make sure the logo is initially hidden */
-      transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for smooth effect */
-    }
-
-    /* Hover effect for logo */
-    .logo:hover {
-      opacity: 1;
-      transform: scale(1.1);  /* Slightly enlarge the logo */
+      width: 160px;
+      margin-bottom: -10px;
+      opacity: 1;  /* Logo will remain fully visible */
     }
 
     h1 {
@@ -172,8 +165,7 @@
 </head>
 <body>
   <div class="card">
-    <img src="logo.jpg" alt="Company Logo" class="logo pop-animate delay-0"
-         onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=No+Logo';" />
+    <img src="logo.jpg" alt="Company Logo" class="logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=No+Logo';" />
 
     <h1>RADICAL ENTERPRISES</h1>
     <div class="tagline">Your Trusted Partner in Providing Medicines and Health Solutions Across Borders</div>
