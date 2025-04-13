@@ -20,12 +20,13 @@
       border-radius: 20px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       max-width: 400px;
-      padding: 30px;
+      padding: 10px;
       text-align: center;
     }
     .logo {
       width: 150px;
       margin-bottom: 0px;
+      opacity: 0;  /* Make sure the logo is initially hidden */
     }
     h1 {
       margin: 10px 0 5px;
@@ -84,7 +85,7 @@
     .socials {
       display: flex;
       justify-content: space-around;
-      margin-top: 1px;
+      margin-top: -10px;
       font-weight: bold;
     }
     .socials a {
@@ -99,30 +100,64 @@
       height: 36px;
       margin-bottom: 1px;
     }
-    .download-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #d4af37, #f9d976, #e4c27b);
-  color: #000;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-}
 
-.download-btn:hover {
-  background: linear-gradient(90deg, #c9a232, #f6c849, #d8b166);
-  transform: translateY(-5px); /* Increased lift effect */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5); /* Stronger shadow */
-}
+    /* Animation */
+    @keyframes popIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1; /* Ensure opacity stays at 1 */
+      }
+    }
+
+    .pop-animate {
+      animation: popIn 0.8s ease-in-out forwards; /* Set the animation to retain its final state */
+    }
+
+    .delay-0 {
+      animation-delay: 0s;
+    }
+    .delay-1 {
+      animation-delay: 0.3s;
+    }
+    .delay-2 {
+      animation-delay: 0.6s;
+    }
+    .delay-3 {
+      animation-delay: 0.9s;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #d4af37, #f9d976, #e4c27b);
+      color: #000;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(90deg, #c9a232, #f6c849, #d8b166);
+      transform: translateY(-5px); /* Increased lift effect */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5); /* Stronger shadow */
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="logo.jpg" alt="Company Logo" class="logo"
+    <img src="logo.jpg" alt="Company Logo" class="logo pop-animate delay-0"
          onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=No+Logo';" />
 
     <h1>RADICAL ENTERPRISES</h1>
@@ -145,15 +180,15 @@
     </div>
 
     <div class="socials">
-      <a href="https://wa.me/918275293123" target="_blank">
+      <a href="https://wa.me/918275293123" target="_blank" class="pop-animate delay-1">
         <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/>
         WhatsApp
       </a>
-      <a href="https://t.me/RadicalEnterprisesIndia" target="_blank">
+      <a href="https://t.me/RadicalEnterprisesIndia" target="_blank" class="pop-animate delay-2">
         <img src="https://img.icons8.com/color/48/000000/telegram-app.png" alt="Telegram"/>
         Telegram
       </a>
-      <a href="https://signal.me/#eu/loxnKYMczAWxQpLg15aBHlDnN4_Oo4NtoKVgiRE1SUcwFcKNKFZCQr1Oq_yn9coK" target="_blank">
+      <a href="https://signal.me/#eu/loxnKYMczAWxQpLg15aBHlDnN4_Oo4NtoKVgiRE1SUcwFcKNKFZCQr1Oq_yn9coK" target="_blank" class="pop-animate delay-3">
         <img src="https://img.icons8.com/color/48/signal-app.png" alt="Signal"/>
         Signal
       </a>
